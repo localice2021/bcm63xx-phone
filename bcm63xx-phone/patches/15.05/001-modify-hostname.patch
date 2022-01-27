@@ -1,0 +1,31 @@
+diff --git a/package/base-files/files/etc/config/system b/package/base-files/files/etc/config/system
+index 3dfbfc4..650ce1c 100644
+--- a/package/base-files/files/etc/config/system
++++ b/package/base-files/files/etc/config/system
+@@ -1,5 +1,5 @@
+ config system
+-	option hostname	OpenWrt
++	option hostname	Vodafone
+ 	option timezone	UTC
+ 
+ config timeserver ntp
+diff --git a/package/kernel/mac80211/files/lib/wifi/mac80211.sh b/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+index ea229d6..00e83e2 100644
+--- a/package/kernel/mac80211/files/lib/wifi/mac80211.sh
++++ b/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+@@ -115,13 +115,13 @@ config wifi-device  radio$devidx
+ $dev_id
+ $ht_capab
+ 	# REMOVE THIS LINE TO ENABLE WIFI:
+-	option disabled 1
++	option disabled 0
+ 
+ config wifi-iface
+ 	option device   radio$devidx
+ 	option network  lan
+ 	option mode     ap
+-	option ssid     OpenWrt
++	option ssid     Vodafone
+ 	option encryption none
+ 
+ EOF
